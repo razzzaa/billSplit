@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+.App {
+  display: flex;
+  width: 60vw;
+  height: 100vh;
+}
+
+.listMain {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.friendsEach {
+  height: 10vh;
+  width: 400px;
+}
+
+.friendsEach li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.friendsEach ul {
+  margin: 0;
+  padding: 0;
+}
+.friendsEach li.selected {
+  background-color: rgba(244, 179, 0, 0.164);
+  border-radius: 10px;
+}
+
+.nameSum {
+  text-align: start;
+  width: 200px;
+}
+
+.friends button {
+  margin: 10px;
+}
+
+.addFriends {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 180px;
+  background-color: rgba(244, 179, 0, 0.164);
+  border-radius: 10px;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+input {
+  border-radius: 5px;
+  border-color: rgba(244, 179, 0, 0.26);
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.bill {
+  display: flex;
+  height: 50vh;
+  width: 50vw;
+}
+
+.billForm form {
+  position: relative;
+  top: 90px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(244, 179, 0, 0.164);
+  margin: 10px;
+  border-radius: 10px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 20vw;
+}
+
+.billFormInputs {
+  display: flex;
+  justify-content: space-between;
+}
