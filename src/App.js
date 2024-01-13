@@ -214,7 +214,7 @@ function SplitBill({ selectedFrnd, friend, handleBill }) {
             </option>
           </select>
         </div>
-        <Button>asd</Button>
+        <Button>Split</Button>
       </form>
     </div>
   );
