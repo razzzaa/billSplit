@@ -38,16 +38,17 @@ function App() {
   }
 
   function handleNewFriend(id, name, img) {
-    setFriend([...friend, { id, name, img, total: 0 }]);
+    setFriend((friends) => [...friends, { id, name, img, total: 0 }]);
   }
 
-  function handleBill(pays, myBill) {
+  function handleBill(pays, myBill, friendsBill) {
     setFriend(
       friend.map((frnd) =>
         frnd.id === selectedFrnd.id
           ? {
               ...frnd,
-              total: pays === "you" ? frnd.total + myBill : frnd.total - myBill,
+              total:
+                pays === "you" ? frnd.total + friendsBill : frnd.total - myBill,
             }
           : frnd
       )
@@ -175,12 +176,12 @@ function SplitBill({ selectedFrnd, friend, handleBill }) {
   const [bill, setBill] = useState("");
   const [myBill, setMyBill] = useState("");
   const [pays, setPays] = useState("you");
-  const othersBill = bill - myBill;
+  const othersBill = bill ? bill - myBill : "";
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    handleBill(pays, myBill);
+    handleBill(pays, myBill, othersBill);
   }
 
   return (
