@@ -180,6 +180,7 @@ function SplitBill({ selectedFrnd, friend, handleBill }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!myBill || !bill) return;
 
     handleBill(pays, myBill, othersBill);
   }
