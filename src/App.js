@@ -75,6 +75,7 @@ function App() {
             handleBill={handleBill}
             friend={friend}
             selectedFrnd={selectedFrnd}
+            key={selectedFrnd.id}
           />
         )}
       </div>
@@ -199,7 +200,12 @@ function SplitBill({ selectedFrnd, friend, handleBill }) {
         <div className="billFormInputs">
           <label>🫵Your expense:</label>
           <input
-            onChange={(e) => setMyBill(Number(e.target.value))}
+            value={myBill}
+            onChange={(e) =>
+              setMyBill(
+                Number(e.target.value) > bill ? myBill : Number(e.target.value)
+              )
+            }
             type="number"
           />
         </div>
